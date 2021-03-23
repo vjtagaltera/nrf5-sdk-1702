@@ -1,0 +1,15 @@
+
+$ ls -l
+-rwxrwxr-x+ 1     134042710 Mar 23 10:05 DeviceDownload-nrf5sdk17_0_2.zip
+
+$ split -b 80000000 DeviceDownload-nrf5sdk17_0_2.zip
+
+$ ls -l
+-rwxrwxr-x+ 1     134042710 Mar 23 10:05 DeviceDownload-nrf5sdk17_0_2.zip
+-rw-rw-r--+ 1      80000000 Mar 23 10:05 xaa
+-rw-rw-r--+ 1      54042710 Mar 23 10:05 xab
+
+$ sha256sum * > log-sums
+
+
+
